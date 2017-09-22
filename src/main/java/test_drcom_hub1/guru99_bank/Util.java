@@ -15,7 +15,9 @@ public class Util {
 	public static final String CHROME_DRIVER_PATH = dirPath + "\\src\\main\\chromedriver.exe";
 	
 	// set base URL
-	public static String baseURL = "";
+	public static String baseURL = "http://demo.guru99.com/V1/";
+	public static String adminId ="mngr98195";
+	public static String adminPassword = "gygUtUt";
 	
 	// set wait time
 	public static int timeOut = 20;

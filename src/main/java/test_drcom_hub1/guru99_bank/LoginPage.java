@@ -6,6 +6,9 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
 	WebDriver driver;
 	
+	// declaring expected message
+	String expMsgTitlePage = "Guru99 Bank Home Page";
+	
 	// declaring variables/objects of textboxs
 	By txtUserId = By.xpath("//input[@name='uid']");
 	By txtPassword = By.xpath("//input[@name='password']");
@@ -16,7 +19,7 @@ public class LoginPage {
 	
 	// initializing contructor
 	public LoginPage (WebDriver driver) {
-		driver = this.driver;
+		this.driver = driver;
 	}
 	
 	// method enter value into UserId field

@@ -14,8 +14,12 @@ public class Util {
 	public static final String CHROME_DRIVER_CORE = "webdriver.chrome.driver";
 	public static final String CHROME_DRIVER_PATH = dirPath + "\\src\\main\\chromedriver.exe";
 	
+	// set Firefox browser driver
+	public static final String FIREFOX_DRIVER_CORE = "webdriver.gecko.driver";
+	public static final String FIREFOX_DRIVER_PATH = dirPath + "\\src\\main\\geckodriver.exe";
+	
 	// set base URL
-	public static String baseURL = "http://demo.guru99.com/V1/";
+	public static String baseURL = "http://demo.guru99.com/V4/";
 	public static String adminId ="mngr98195";
 	public static String adminPassword = "gygUtUt";
 	

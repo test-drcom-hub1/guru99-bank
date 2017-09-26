@@ -11,7 +11,7 @@ public class LeftMenu {
 	
 	// initializing contructor
 	public LeftMenu(WebDriver driver) {
-		driver = this.driver;
+		this.driver = driver;
 	}
 	
 	// method click on link "New Customer"

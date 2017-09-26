@@ -2,19 +2,26 @@ package test_drcom_hub1.guru99_bank;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class NewCustomerPage {
 	WebDriver driver;
 	
+	// declaring expected message
+	String expMsgCreatedNewCustomer = "Customer Registered Successfully!!!";
+	String expMsgTitlePage = "Guru99 Bank New Customer Entry Page";
+	String expMsgDuplicatedEmail = "Email Address Already Exist !!";
+	
 	// declaring variables/objects of textbox
 	By txtCustomerName = By.xpath("//input[@name='name']");
-	By txtDoB = By.xpath("//input[@name='dob']");
+	By selDoB = By.xpath("//input[@name='dob']");
 	By txtAddress = By.xpath("//textarea[@name='addr']");
 	By txtCity = By.xpath("//input[@name='city']");
 	By txtState = By.xpath("//input[@name='state']");
 	By txtPin = By.xpath("//input[@name='pinno']");
 	By txtPhone = By.xpath("//input[@name='telephoneno']");
 	By txtEmail = By.xpath("//input[@name='emailid']");
+	By txtPassword = By.xpath("//input[@name='password']");
 	
 	// declaring variables/objects of radiobutton
 	By rbtMale = By.xpath("//input[@name='rad1']//parent::td/input[1]");
@@ -30,7 +37,7 @@ public class NewCustomerPage {
 	
 	// initializing constructor
 	public NewCustomerPage(WebDriver driver) {
-		driver = this.driver;
+		this.driver = driver;
 	}
 	
 	// method enter value into Customer Name field
@@ -51,8 +58,7 @@ public class NewCustomerPage {
 	
 	// method enter value into DoB field
 	public void enterDoB(String dateOfBirth) {
-		driver.findElement(txtDoB).clear();
-		driver.findElement(txtDoB).sendKeys(dateOfBirth);
+		driver.findElement(selDoB).sendKeys(dateOfBirth);
 	}
 	
 	// method enter value into Address field
@@ -89,6 +95,12 @@ public class NewCustomerPage {
 	public void enterEmail(String email) {
 		driver.findElement(txtEmail).clear();
 		driver.findElement(txtEmail).sendKeys(email);
+	}
+	
+	// method enter value into Password field
+	public void enterPassword(String password) {
+		driver.findElement(txtPassword).clear();
+		driver.findElement(txtPassword).sendKeys(password);
 	}
 	
 	// method click on button Submit
